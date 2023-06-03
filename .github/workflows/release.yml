@@ -1,4 +1,4 @@
-name: Release (version + changelog)
+name: Release (version + changelog) and publish to Docker Hub
 
 on: workflow_dispatch
 
@@ -23,3 +23,22 @@ jobs:
           # do not use GITHUB_TOKEN, it will not trigger the publish workflow (because it's a github-actions)
           # https://github.com/orgs/community/discussions/16244
           GITHUB_TOKEN: ${{ secrets.RELEASE_PAT_TOKEN }}
+
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Publish
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --all \
+            --target laskakit-data-feeder \
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }}
