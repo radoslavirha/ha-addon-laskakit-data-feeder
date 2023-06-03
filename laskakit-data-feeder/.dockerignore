@@ -1,0 +1,7 @@
+dist
+node_modules
+.dockerignore
+.eslintrc.cjs
+config.json
+Dockerfile
+Readme.md

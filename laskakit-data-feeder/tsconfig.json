@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2022",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "diagnostics": false,
+    "outDir": "./dist"
+  },
+  "include": [
+    "./lib/**/*.ts",
+    "./package.json"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

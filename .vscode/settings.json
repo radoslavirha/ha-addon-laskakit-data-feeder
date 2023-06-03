@@ -1,0 +1,9 @@
+{
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "conventionalCommits.scopes": [
+  ]
+}

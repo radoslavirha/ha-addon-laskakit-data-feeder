@@ -1,0 +1,25 @@
+name: Release (version + changelog)
+
+on: workflow_dispatch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          # cannot push changed version and changelog without PAT
+          token: ${{ secrets.RELEASE_PAT_TOKEN }}
+      - run: git fetch --tags origin
+      - run: yarn install
+      - run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: yarn release --ci
+        env:
+          # do not use GITHUB_TOKEN, it will not trigger the publish workflow (because it's a github-actions)
+          # https://github.com/orgs/community/discussions/16244
+          GITHUB_TOKEN: ${{ secrets.RELEASE_PAT_TOKEN }}

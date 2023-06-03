@@ -1,0 +1,19 @@
+name: CI on pull request (build docker)
+
+on: [pull_request]
+
+jobs:
+  build:
+    name: Test docker build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Test build
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --test \
+            --all \
+            --target laskakit-data-feeder \
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }}

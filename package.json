@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "laskakit-data-feeder"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@release-it-plugins/workspaces": "^3.2.0",
+    "@release-it/conventional-changelog": "^5.1.1",
+    "husky": "^8.0.0",
+    "release-it": "^15.10.3"
+  },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 8.10.0",
+    "yarn": ">= 1.22.18"
+  }
+}

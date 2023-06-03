@@ -1,0 +1,434 @@
+[
+  {
+    "id": 0,
+    "city": "Děčín",
+    "latitude": 50.772656,
+    "longitude": 14.212861
+  },
+  {
+    "id": 1,
+    "city": "Liberec",
+    "latitude": 50.76638,
+    "longitude": 15.054439
+  },
+  {
+    "id": 2,
+    "city": "Jablonec nad Nisou",
+    "latitude": 50.722153,
+    "longitude": 15.170414
+  },
+  {
+    "id": 3,
+    "city": "Ústí nad Labem",
+    "latitude": 50.661216,
+    "longitude": 14.053246
+  },
+  {
+    "id": 4,
+    "city": "Česká Lípa",
+    "latitude": 50.67862,
+    "longitude": 14.539799
+  },
+  {
+    "id": 5,
+    "city": "Semily",
+    "latitude": 50.605258,
+    "longitude": 15.328241
+  },
+  {
+    "id": 6,
+    "city": "Teplice",
+    "latitude": 50.644558,
+    "longitude": 13.835384
+  },
+  {
+    "id": 7,
+    "city": "Trutnov",
+    "latitude": 50.565484,
+    "longitude": 15.909192
+  },
+  {
+    "id": 8,
+    "city": "Litoměřice",
+    "latitude": 50.53852,
+    "longitude": 14.130646
+  },
+  {
+    "id": 9,
+    "city": "Most",
+    "latitude": 50.501655,
+    "longitude": 13.633012
+  },
+  {
+    "id": 10,
+    "city": "Chomutov",
+    "latitude": 50.463598,
+    "longitude": 13.410837
+  },
+  {
+    "id": 11,
+    "city": "Jičín",
+    "latitude": 50.435433,
+    "longitude": 15.361144
+  },
+  {
+    "id": 12,
+    "city": "Náchod",
+    "latitude": 50.414672,
+    "longitude": 16.165735
+  },
+  {
+    "id": 13,
+    "city": "Mladá Boleslav",
+    "latitude": 50.413525,
+    "longitude": 14.908538
+  },
+  {
+    "id": 14,
+    "city": "Mělník",
+    "latitude": 50.354002,
+    "longitude": 14.481881
+  },
+  {
+    "id": 15,
+    "city": "Louny",
+    "latitude": 50.354081,
+    "longitude": 13.803455
+  },
+  {
+    "id": 16,
+    "city": "Karlovy Vary",
+    "latitude": 50.231952,
+    "longitude": 12.872062
+  },
+  {
+    "id": 17,
+    "city": "Jeseník",
+    "latitude": 50.224725,
+    "longitude": 17.198147
+  },
+  {
+    "id": 18,
+    "city": "Hradec Králové",
+    "latitude": 50.210461,
+    "longitude": 15.825311
+  },
+  {
+    "id": 19,
+    "city": "Sokolov",
+    "latitude": 50.174629,
+    "longitude": 12.659992
+  },
+  {
+    "id": 20,
+    "city": "Nymburk",
+    "latitude": 50.185682,
+    "longitude": 15.04376
+  },
+  {
+    "id": 21,
+    "city": "Rychnov nad Kněžnou",
+    "latitude": 50.166065,
+    "longitude": 16.277784
+  },
+  {
+    "id": 22,
+    "city": "Kladno",
+    "latitude": 50.1473358,
+    "longitude": 14.1028503
+  },
+  {
+    "id": 23,
+    "city": "Rakovník",
+    "latitude": 50.106223,
+    "longitude": 13.739762
+  },
+  {
+    "id": 24,
+    "city": "Cheb",
+    "latitude": 50.079633,
+    "longitude": 12.369964
+  },
+  {
+    "id": 25,
+    "city": "Bruntál",
+    "latitude": 49.988277,
+    "longitude": 17.463794
+  },
+  {
+    "id": 26,
+    "city": "Praha",
+    "latitude": 50.075638,
+    "longitude": 14.4379
+  },
+  {
+    "id": 27,
+    "city": "Pardubice",
+    "latitude": 50.034409,
+    "longitude": 15.781299
+  },
+  {
+    "id": 28,
+    "city": "Kolín",
+    "latitude": 50.027429,
+    "longitude": 15.202828
+  },
+  {
+    "id": 29,
+    "city": "Ústí nad Orlicí",
+    "latitude": 49.97228,
+    "longitude": 16.399762
+  },
+  {
+    "id": 30,
+    "city": "Opava",
+    "latitude": 49.94076,
+    "longitude": 17.894899
+  },
+  {
+    "id": 31,
+    "city": "Šumperk",
+    "latitude": 49.977941,
+    "longitude": 16.971875
+  },
+  {
+    "id": 32,
+    "city": "Beroun",
+    "latitude": 49.967305,
+    "longitude": 14.086384
+  },
+  {
+    "id": 33,
+    "city": "Kutná Hora",
+    "latitude": 49.952531,
+    "longitude": 15.268754
+  },
+  {
+    "id": 34,
+    "city": "Chrudim",
+    "latitude": 49.949824,
+    "longitude": 15.795158
+  },
+  {
+    "id": 35,
+    "city": "Karviná",
+    "latitude": 49.856752,
+    "longitude": 18.543319
+  },
+  {
+    "id": 36,
+    "city": "Ostrava",
+    "latitude": 49.821023,
+    "longitude": 18.262624
+  },
+  {
+    "id": 37,
+    "city": "Tachov",
+    "latitude": 49.7952786,
+    "longitude": 12.6336519
+  },
+  {
+    "id": 38,
+    "city": "Svitavy",
+    "latitude": 49.755263,
+    "longitude": 16.469286
+  },
+  {
+    "id": 39,
+    "city": "Benešov",
+    "latitude": 49.7816247,
+    "longitude": 14.6869667
+  },
+  {
+    "id": 40,
+    "city": "Plzeň",
+    "latitude": 49.738531,
+    "longitude": 13.373737
+  },
+  {
+    "id": 41,
+    "city": "Rokycany",
+    "latitude": 49.738197,
+    "longitude": 13.592993
+  },
+  {
+    "id": 42,
+    "city": "Frýdek-Místek",
+    "latitude": 49.682031,
+    "longitude": 18.367422
+  },
+  {
+    "id": 43,
+    "city": "Příbram",
+    "latitude": 49.685532,
+    "longitude": 13.999045
+  },
+  {
+    "id": 44,
+    "city": "Nový Jičín",
+    "latitude": 49.594425,
+    "longitude": 18.013636
+  },
+  {
+    "id": 45,
+    "city": "Olomouc",
+    "latitude": 49.593878,
+    "longitude": 17.250979
+  },
+  {
+    "id": 46,
+    "city": "Havlíčkův Brod",
+    "latitude": 49.604436,
+    "longitude": 15.579755
+  },
+  {
+    "id": 47,
+    "city": "Žďár nad Sázavou",
+    "latitude": 49.564288,
+    "longitude": 15.939507
+  },
+  {
+    "id": 48,
+    "city": "Přerov",
+    "latitude": 49.456579,
+    "longitude": 17.45033
+  },
+  {
+    "id": 49,
+    "city": "Prostějov",
+    "latitude": 49.472549,
+    "longitude": 17.106851
+  },
+  {
+    "id": 50,
+    "city": "Domažlice",
+    "latitude": 49.439803,
+    "longitude": 12.931243
+  },
+  {
+    "id": 51,
+    "city": "Pelhřimov",
+    "latitude": 49.430721,
+    "longitude": 15.223083
+  },
+  {
+    "id": 52,
+    "city": "Tábor",
+    "latitude": 49.413089,
+    "longitude": 14.677566
+  },
+  {
+    "id": 53,
+    "city": "Jihlava",
+    "latitude": 49.41586,
+    "longitude": 15.595469
+  },
+  {
+    "id": 54,
+    "city": "Klatovy",
+    "latitude": 49.395655,
+    "longitude": 13.295194
+  },
+  {
+    "id": 55,
+    "city": "Blansko",
+    "latitude": 49.36495,
+    "longitude": 16.647855
+  },
+  {
+    "id": 56,
+    "city": "Vsetín",
+    "latitude": 49.339025,
+    "longitude": 17.993952
+  },
+  {
+    "id": 57,
+    "city": "Kroměříž",
+    "latitude": 49.291758,
+    "longitude": 17.39948
+  },
+  {
+    "id": 58,
+    "city": "Písek",
+    "latitude": 49.303554,
+    "longitude": 14.158129
+  },
+  {
+    "id": 59,
+    "city": "Vyškov",
+    "latitude": 49.277552,
+    "longitude": 16.996199
+  },
+  {
+    "id": 60,
+    "city": "Strakonice",
+    "latitude": 49.260504,
+    "longitude": 13.910408
+  },
+  {
+    "id": 61,
+    "city": "Zlín",
+    "latitude": 49.224537,
+    "longitude": 17.662863
+  },
+  {
+    "id": 62,
+    "city": "Třebíč",
+    "latitude": 49.214887,
+    "longitude": 15.879652
+  },
+  {
+    "id": 63,
+    "city": "Brno",
+    "latitude": 49.19516,
+    "longitude": 16.606937
+  },
+  {
+    "id": 64,
+    "city": "Jindřichův Hradec",
+    "latitude": 49.144582,
+    "longitude": 15.006239
+  },
+  {
+    "id": 65,
+    "city": "Uherské Hradiště",
+    "latitude": 49.059897,
+    "longitude": 17.49595
+  },
+  {
+    "id": 66,
+    "city": "Prachatice",
+    "latitude": 49.01101,
+    "longitude": 14.0001
+  },
+  {
+    "id": 67,
+    "city": "České Budějovice",
+    "latitude": 48.975758,
+    "longitude": 14.480355
+  },
+  {
+    "id": 68,
+    "city": "Hodonín",
+    "latitude": 48.8576153,
+    "longitude": 17.1240233
+  },
+  {
+    "id": 69,
+    "city": "Znojmo",
+    "latitude": 48.856011,
+    "longitude": 16.054368
+  },
+  {
+    "id": 70,
+    "city": "Český Krumlov",
+    "latitude": 48.812835,
+    "longitude": 14.317566
+  },
+  {
+    "id": 71,
+    "city": "Břeclav",
+    "latitude": 48.75324,
+    "longitude": 16.882617
+  }
+]
