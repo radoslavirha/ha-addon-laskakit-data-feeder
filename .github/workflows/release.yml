@@ -1,6 +1,9 @@
-name: Release (version + changelog) and publish to Docker Hub
+name: Release and publish to Docker Hub
 
-on: workflow_dispatch
+on:
+  release:
+    types:
+      - published
 
 jobs:
   release:

@@ -5,16 +5,14 @@ module.exports = {
     commitMessage: 'chore: :bookmark: Release ${version}',
     push: true,
     requireCleanWorkingDir: false,
-    tag: true,
-    tagAnnotation: 'Release ${version}',
-    tagName: '${version}'
+    tag: false
   },
   npm: false,
   hooks: {
     'before:init': ['git pull', 'git fetch --tags origin' ]
   },
   github: {
-    release: true
+    release: false
   },
   plugins: {
     '@release-it/conventional-changelog': {
