@@ -38,7 +38,7 @@ module.exports = {
       skipChecks: true,
       publish: false,
       additionalManifests: {
-        versionUpdates: [ 'package.json', 'laskakit-data-feeder/config.json']
+        versionUpdates: [ 'package.json']
       }
     },
   }
