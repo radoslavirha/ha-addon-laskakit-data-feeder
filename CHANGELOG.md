@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/compare/0.1.2...0.1.3) (2023-06-04)
+
+
+### Documentation
+
+* readme template ([9b9bdea](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/commit/9b9bdea3c7c5a4c658f2211a064b3151bbea85a8))
+
 ## [0.1.2](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/compare/0.1.1...0.1.2) (2023-06-04)
 
 
