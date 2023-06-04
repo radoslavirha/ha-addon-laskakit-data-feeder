@@ -6,7 +6,7 @@ module.exports = {
     push: true,
     requireCleanWorkingDir: false,
     tag: true,
-    // tagAnnotation: 'Release ${version}',
+    tagAnnotation: 'Release ${version}',
     tagName: '${version}'
   },
   npm: false,
