@@ -1,14 +1,5 @@
 name-template: 'Release $RESOLVED_VERSION'
 tag-template: '$RESOLVED_VERSION'
-categories:
-  - title: '🚀 Features'
-    labels:
-      - 'feat'
-  - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-  - title: '🧰 Maintenance'
-    label: 'chore'
 template: |
   ## What’s Changed
 
