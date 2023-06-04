@@ -8,9 +8,6 @@ module.exports = {
     tag: false
   },
   npm: false,
-  hooks: {
-    'before:init': ['git pull', 'git fetch --tags origin' ]
-  },
   github: {
     release: false
   },
