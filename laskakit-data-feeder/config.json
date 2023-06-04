@@ -10,7 +10,7 @@
     "armv7",
     "i386"
   ],
-  "url": "https://github.com/radoslavirha/ha-addon-laskakit-data-feeder.git",
+  "url": "https://github.com/radoslavirha/ha-addon-laskakit-data-feeder",
   "init": "false",
   "startup": "application",
   "hassio_role": "default",
