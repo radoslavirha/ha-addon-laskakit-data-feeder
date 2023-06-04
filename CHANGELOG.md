@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.1.1](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/compare/0.1.0...0.1.1) (2023-06-04)
+
 ## 0.1.0 (2023-06-03)
 
 
