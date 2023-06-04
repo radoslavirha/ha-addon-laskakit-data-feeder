@@ -21,6 +21,7 @@ jobs:
       - run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: git branch
       - run: yarn release --ci
         # env:
         #   # do not use GITHUB_TOKEN, it will not trigger the publish workflow (because it's a github-actions)
