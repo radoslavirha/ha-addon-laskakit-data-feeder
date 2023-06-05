@@ -9,7 +9,7 @@ jobs:
   update-changelog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Get semantic version
         id: semver
         run: echo "tag=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
@@ -55,7 +55,9 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
-      - run: git branch
+      - name: Get semantic version
+        id: semver
+        run: echo "tag=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
@@ -67,7 +69,8 @@ jobs:
           args: |
             --all \
             --target laskakit-data-feeder \
-            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }}
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }} \
+            --version ${{ steps.semver.outputs.tag }}
 
   update-add-ons-repository:
     name: 📢 Publish Add-on in Homeassistant
