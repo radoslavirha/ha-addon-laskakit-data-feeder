@@ -19,7 +19,7 @@ const plugin: HapiPluginWithApplicationState<null> = {
       options: {
         info: {
           title: 'REST API',
-          description: 'Data Feeder for LaskaKit interactive map of Czech republic',
+          description: 'LaskaKit data feeder',
           version: server.app.version,
           contact: {
             name: 'Radoslav Irha',

@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Data feeder for LaskaKit interactive map of Czech republic
+# Home Assistant Add-on: LaskaKit data feeder
 
 This add-on is insired by https://github.com/jakubcizek/pojdmeprogramovatelektroniku/tree/master/SrazkovyRadar.
 
@@ -19,7 +19,7 @@ Homeassistant automation calls `laskakit_feeder_rain` rest_command service, add-
 ## Installation
 
 1) In Home Assistant go to `Settings` > `Add-ons` > `Add-on Store` > dots top-right > `Repositories` and add the repository URL `https://github.com/radoslavirha/homeassistant-addons.git`.
-2) Click on `Data Feeder for LaskaKit interactive map of Czech republic` > `INSTALL`.
+2) Click on `LaskaKit data feeder` > `INSTALL`.
 3) Click on `Configuration` and set required value of `laskakit_url`.
 4) Click on `START` after enabling `Watchdog` and optionally `Auto update`. Click on `LOGS` and `REFRESH` to see everything is working as expected.
 
