@@ -26,6 +26,9 @@ categories:
   - title: '📃 Documents'
     labels:
       - 'docs'
+  - title: '✅ Tests'
+    labels:
+      - 'test'
   - title: '🧩 Dependency Updates'
     labels:
       - 'deps'
@@ -68,11 +71,15 @@ autolabeler:
   - label: 'ci'
     title:
       - '/ci:/i'
+  - label: 'test'
+    title:
+      - '/test:/i'
   - label: 'dependencies'
     title:
       - '/deps:/i'
       - '/dependencies:/i'
       - '/bump:/i'
+      - '/build:/i'
 commitish: main
 template: |
   ## What’s Changed
