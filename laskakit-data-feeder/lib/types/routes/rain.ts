@@ -10,3 +10,14 @@ export interface IRouteGetRainRefs {
 export interface IRouteGetRainValidation {
   query: typeof getRainQueryValidator;
 }
+
+/**
+ * GET /rain/image?pixelBuffer={number}
+ */
+export interface IRouteGetRainImageRefs {
+  Query: RainQuery;
+}
+
+export interface IRouteGetRainImageValidation {
+  query: typeof getRainQueryValidator;
+}
