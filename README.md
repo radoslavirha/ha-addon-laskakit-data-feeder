@@ -6,6 +6,8 @@ This add-on is insired by https://github.com/jakubcizek/pojdmeprogramovatelektro
 
 [Development guide](.github/development.md)
 
+[CHANGELOG](CHANGELOG.md)
+
 ## Description
 
 This add-on is basically a Node.js server that processes data from the ČHMÚ precipitation radar and sends it to the pre-programmed [LaskaKit](https://www.laskakit.cz/laskakit-interaktivni-mapa-cr-ws2812b/).
