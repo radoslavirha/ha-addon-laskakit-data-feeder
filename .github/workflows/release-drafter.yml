@@ -4,17 +4,22 @@ on:
   push:
     branches:
       - main
-  # pull_request:
-  #   types: [opened, reopened, synchronize]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
 
-# permissions:
-#   contents: read
+permissions:
+  contents: read
 
 jobs:
   update_release_draft:
-    # permissions:
-    #   contents: write
-    #   pull-requests: write
+    permissions:
+      contents: write
+      pull-requests: write
+      checks: write
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v5
