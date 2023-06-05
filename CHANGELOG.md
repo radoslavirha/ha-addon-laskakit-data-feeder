@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 - 2023-06-05
+
+### What’s Changed
+
+### 🚀 Features
+
+- feat: :sparkles: new /rain/image endpoint @radoslavirha (#7)
+
 ## 0.1.1 - 2023-06-05
 
 ### What’s Changed
