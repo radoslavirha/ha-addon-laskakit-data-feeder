@@ -1,0 +1,82 @@
+name: Publish
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git branch
+    # - name: Update changelog
+    #   run: |
+    #     npm install github-release-notes
+    #     export GREN_GITHUB_TOKEN=$
+    #     npm run overrideChangelog
+    # - name: Create Pull Request
+    #   uses: peter-evans/create-pull-request@v3
+    #   with:
+    #     commit-message: update changelog
+    #     title: Update Changelog
+    #     body: Update changelog to reflect release changes
+    #     branch: update-changelog
+    #     base: main
+  # release:
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #         ref: main
+  #         # cannot push changed version and changelog without PAT
+  #         token: ${{ secrets.RELEASE_PAT_TOKEN }}
+  #     - run: git fetch --tags origin
+  #     - run: yarn install
+  #     - run: |
+  #         git config user.name "${GITHUB_ACTOR}"
+  #         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+  #     - run: yarn release --ci
+        # env:
+        #   # do not use GITHUB_TOKEN, it will not trigger the publish workflow (because it's a github-actions)
+        #   # https://github.com/orgs/community/discussions/16244
+        #   GITHUB_TOKEN: ${{ secrets.RELEASE_PAT_TOKEN }}
+
+  publish-docker:
+    name: Publish to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - run: git branch
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Publish
+        uses: home-assistant/builder@master
+        with:
+          args: |
+            --all \
+            --target laskakit-data-feeder \
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }}
+
+  update-add-ons-repository:
+    name: 📢 Publish Add-on in Homeassistant
+    runs-on: ubuntu-latest
+    needs:
+    #  - release
+     - publish-docker
+    steps:
+      - name: 🚀 Dispatch Repository Updater update signal
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.HA_DISPATCH_TOKEN }}
+          repository: radoslavirha/homeassistant-addons
+          event-type: update
+          client-payload: '{"addon": "laskakit-data-feeder"}'
