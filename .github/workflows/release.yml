@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Get semantic version
         id: semver
-        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/v}"
-      - run: echo ${{ steps.semver.outputs.version }}
+        run: echo "tag=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+      - run: echo ${{ steps.semver.outputs.tag }}
     # - name: Update changelog
     #   run: |
     #     npm install github-release-notes
