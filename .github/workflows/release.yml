@@ -14,9 +14,17 @@ jobs:
           ref: main
           token: ${{ secrets.RELEASE_PAT_TOKEN }}
       - name: Update root package.json version
-        run: yarn version --new-version ${{ github.event.release.tag_name }}
+        uses: jossef/action-set-json-field@v2.1
+        with:
+          file: package.json
+          field: version
+          value: ${{ github.event.release.tag_name }}
       - name: Update laskakit-data-feeder package.json version
-        run: cd laskakit-data-feeder && yarn version --new-version ${{ github.event.release.tag_name }}
+        uses: jossef/action-set-json-field@v2.1
+        with:
+          file: laskakit-data-feeder/package.json
+          field: version
+          value: ${{ github.event.release.tag_name }}
       - name: Update laskakit-data-feeder addon config.json version
         uses: jossef/action-set-json-field@v2.1
         with:
