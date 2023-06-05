@@ -61,7 +61,3 @@ When server is built, you can start it in production mode (suitable for HA add-o
 cd laskakit-data-feeder
 yarn start:prod
 ```
-
-## Release
-
-Based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) [CHANGELOG](data-feeder/CHANGELOG.md) is generated and version is bumped.

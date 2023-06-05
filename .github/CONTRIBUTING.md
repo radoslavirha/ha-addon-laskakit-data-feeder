@@ -39,7 +39,7 @@ Scan through our [existing issues](https://github.com/radoslavirha/ha-addon-lask
 
 Adherence to [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) is required.
 
-You can use GitHub issue ID in commit body prefixed with # (will be used in Changelog). E.g. #2
+You can use GitHub issue ID in commit body prefixed with #. E.g. #2
 
 Full commit message:
 
