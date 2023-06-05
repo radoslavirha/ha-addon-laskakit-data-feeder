@@ -1,4 +1,4 @@
-name: Release and publish to Docker Hub
+name: Publish
 
 on:
   release:
@@ -6,6 +6,24 @@ on:
       - published
 
 jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git branch
+    # - name: Update changelog
+    #   run: |
+    #     npm install github-release-notes
+    #     export GREN_GITHUB_TOKEN=$
+    #     npm run overrideChangelog
+    # - name: Create Pull Request
+    #   uses: peter-evans/create-pull-request@v3
+    #   with:
+    #     commit-message: update changelog
+    #     title: Update Changelog
+    #     body: Update changelog to reflect release changes
+    #     branch: update-changelog
+    #     base: main
   # release:
   #   runs-on: ubuntu-latest
   #   permissions:
@@ -28,12 +46,13 @@ jobs:
         #   # https://github.com/orgs/community/discussions/16244
         #   GITHUB_TOKEN: ${{ secrets.RELEASE_PAT_TOKEN }}
 
-  publish:
-    name: Publish
+  publish-docker:
+    name: Publish to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+      - run: git branch
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
@@ -52,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
     #  - release
-     - publish
+     - publish-docker
     steps:
       - name: 🚀 Dispatch Repository Updater update signal
         uses: peter-evans/repository-dispatch@v1
