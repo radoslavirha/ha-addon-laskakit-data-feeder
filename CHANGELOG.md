@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1 - 2023-06-05
+
+### What’s Changed
+
+### 📃 Documents
+
+- docs: add Changelog link to Readme @radoslavirha (#6)
+
 ## 0.1.0 - 2023-06-05
 
 ### What’s Changed
