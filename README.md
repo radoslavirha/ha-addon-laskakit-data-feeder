@@ -42,27 +42,31 @@ rest_command:
 
 ## Add-on REST API
 
-Visit `http://{your IP}:8000/documentation`
+<details>
+  <summary><code>GET</code> <code><b>/documentation</b></code> <code>(Swagger documentation)</code></summary>
+</details>
+
+<details>
+  <summary><code>GET</code> <code><b>/rain</b></code> <code>(Downloads precipitation image from ČHMÚ, process and send data to LaskaKit)</code></summary>
+
+Query Parameters
+
+> | name        | type      | data type | default | description                                 |
+> |-------------|-----------|-----------|---------|---------------------------------------------|
+> | pixelBuffer | optional  | int       | 0       | Pixel buffer around the city                |
+</details>
+
+<details>
+  <summary><code>GET</code> <code><b>/rain/image</b></code> <code>(Downloads precipitation image from ČHMÚ, creates current image and returns joined image)</code></summary>
+
+Query Parameters
+
+> | name        | type      | data type | default | description                                 |
+> |-------------|-----------|-----------|---------|---------------------------------------------|
+> | pixelBuffer | optional  | int       | 0       | Pixel buffer around the city                |
+</details>
 
 Swagger UI does not show parsed payload/params/query/headers validators. It's built for Joi, not Zod. Requested feature: https://github.com/hapi-swagger/hapi-swagger/issues/804#issue-1734729569
-
-### GET /rain
-
-Downloads precipitation image from ČHMÚ, process and send data to LaskaKit
-
-#### Query parameters
-
-- `pixelBuffer` (default 0) - a pixel buffer around the city, used to determine if it is raining at a given location. The resulting value is the maximum R,G,B value of the selected pixels
-  - E.g. `{laskakit_url}?pixelBuffer=2`
-
-### GET /rain/image
-
-Downloads precipitation image from ČHMÚ, creates current image and returns joined image
-
-#### Query parameters
-
-- `pixelBuffer` (default 0) - a pixel buffer around the city, used to determine if it is raining at a given location. The resulting value is the maximum R,G,B value of the selected pixels
-  - E.g. `{laskakit_url}?pixelBuffer=2`
 
 ## Future
 
