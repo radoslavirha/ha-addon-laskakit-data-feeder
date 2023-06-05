@@ -44,6 +44,13 @@ categories:
       - 'chore'
     collapse-after: 5
 autolabeler:
+  - label: 'major'
+    title:
+      - '/!:/i'
+  - label: 'minor'
+    title:
+      - '/feat:/i'
+      - '/refactor:/i'
   - label: 'breaking change'
     title:
       - '/!:/i'
@@ -59,9 +66,6 @@ autolabeler:
   - label: 'refactor'
     title:
       - '/refactor:/i'
-  - label: 'test'
-    title:
-      - '/test:/i'
   - label: 'chore'
     title:
       - '/chore:/i'
