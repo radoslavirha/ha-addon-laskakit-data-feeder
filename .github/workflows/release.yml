@@ -6,7 +6,7 @@ on:
       - published
 
 jobs:
-  update-versions:
+  update-versions-changelog:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -32,16 +32,26 @@ jobs:
           file: laskakit-data-feeder/config.json
           field: version
           value: ${{ github.event.release.tag_name }}
+      - name: Extract release date from git tag
+        id: release_date
+        run: |
+          echo "date=$(git log -1 --date=short --format=%ad '${{ github.event.release.tag_name }}')" >> $GITHUB_OUTPUT;
+      - name: Update Changelog
+        uses: stefanzweifel/changelog-updater-action@v1
+        with:
+          latest-version: ${{ github.event.release.tag_name }}
+          release-date: ${{ steps.release_date.outputs.date }}
+          release-notes: ${{ github.event.release.body }}
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: Update to version ${{ github.event.release.tag_name }} [skip ci]"
+          commit_message: "chore: Release ${{ github.event.release.tag_name }} [skip ci]"
 
   publish-docker:
     name: Publish to Docker Hub
     runs-on: ubuntu-latest
     needs:
-      - update-versions
+      - update-versions-changelog
     steps:
       - uses: actions/checkout@v3
         with:
