@@ -1,6 +1,6 @@
 {
   "name": "@irha-ha-addon/laskakit-data-feeder",
-  "version": "0.1.28",
+  "version": "0.1.0",
   "description": "Data Feeder for LaskaKit interactive map of Czech republic",
   "main": "dist/lib/server.js",
   "repository": "git@github.com:radoslavirha/ha-addon-laskakit-data-feeder.git",
