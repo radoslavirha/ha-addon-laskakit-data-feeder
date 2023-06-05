@@ -2,9 +2,9 @@
 
 This add-on is insired by https://github.com/jakubcizek/pojdmeprogramovatelektroniku/tree/master/SrazkovyRadar.
 
-[Contributing](.github/CONTRIBUTING.md)
+[Contributing guide](.github/CONTRIBUTING.md)
 
-[Development](.github/development.md)
+[Development guide](.github/development.md)
 
 ## Description
 
