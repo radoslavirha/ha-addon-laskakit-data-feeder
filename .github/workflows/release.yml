@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git branch
+      - name: Get semantic version
+        id: semver
+        run: echo "::set-output name=version::${GITHUB_REF#refs/tags/v}"
+      - run: echo ${{ steps.semver.outputs.version }}
     # - name: Update changelog
     #   run: |
     #     npm install github-release-notes
