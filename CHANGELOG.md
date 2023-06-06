@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2 - 2023-06-06
+
+### What’s Changed
+
+### 📃 Documents
+
+- docs: :memo: update REST API docs @radoslavirha (#9)
+
 ## 0.2.1 - 2023-06-05
 
 ### What’s Changed
