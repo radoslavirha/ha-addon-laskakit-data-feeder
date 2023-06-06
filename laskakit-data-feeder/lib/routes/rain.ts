@@ -14,7 +14,7 @@ const rain: HapiServerRoute<IRouteGetRainRefs, IRouteGetRainValidation> = {
     plugins: {
       'hapi-swagger': {
         responses: {
-          200: { description: 'OK' },
+          200: { description: 'Array of cities sent to LaskaKit' },
           400: { description: 'Bad Request' }
         }
       }

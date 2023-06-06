@@ -13,11 +13,15 @@ export const rain: HapiHandler<IRouteGetRainRefs> = async (request, h) => {
     query = request.query,
     { IMAGE_TO_CONSOLE } = request.server.app.options;
 
+  let response;
+
   try {
     const image = await rainService.getRainImage();
     const emptyImage = new Jimp(image.getWidth(), image.getHeight());
 
     const { rainyCities, rainyImage } = await rainService.processCities(image, emptyImage, query.pixelBuffer);
+
+    response = rainyCities;
 
     if (IMAGE_TO_CONSOLE) {
       try {
@@ -57,7 +61,7 @@ export const rain: HapiHandler<IRouteGetRainRefs> = async (request, h) => {
     return Boom.badRequest((error as AxiosError).message);
   }
 
-  return h.response('OK').code(200);
+  return h.response(response).code(200);
 };
 
 /**
@@ -82,8 +86,7 @@ export const rainImage: HapiHandler<IRouteGetRainImageRefs> = async (request, h)
   }
 
   return h.response(visualResponse)
-    .type(Jimp.MIME_PNG)
-    .header('Cache-Control', 'public, max-age=31536000');
+    .type(Jimp.MIME_PNG);
 };
 
 export default {
