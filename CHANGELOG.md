@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4 - 2023-06-07
+
+### What’s Changed
+
+Create tags with `v` prefix, everywhere else strip the prefix (adapt hassio-addons/repository-updater)
+
 ## v0.2.3 - 2023-06-07
 
 ### What’s Changed
