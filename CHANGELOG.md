@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.6 - 2023-06-07
+
+### What’s Changed
+
+ingress port testing
+
 ## 0.2.5 - 2023-06-07
 
 ### What’s Changed
