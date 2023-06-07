@@ -22,7 +22,7 @@ jobs:
         # Final verdict: tag prefixed with `v`, everything else without prefix => package.json, config.json (version is used for docker build)
         run: |
           TAG=${{ github.event.release.tag_name }}
-          echo "version=${TAG#v}" >> $GITHUB_ENV
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
       - name: Update root package.json version
         uses: jossef/action-set-json-field@v2.1
         with:
