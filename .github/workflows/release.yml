@@ -14,24 +14,32 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: main
+      - name: Parse version
+        # weird hassio-addons/repository-updater behaviour
+        # Always creates add-on Readme URL with `v` prefix. E.g. /tree/v*.*.*. so we need tags prefixed with `v` for working add-ons Readme
+        # `v` prefix is always stripped when creating addon config.json in add-ons repo ... so we need to build containers without prefix
+        # Final verdict: tag prefixed with `v`, everything else without prefix => package.json, config.json (version is used for docker build)
+        run: |
+          TAG=${{ github.event.release.tag_name }}
+          echo "VERSION=${TAG#v}" >> $GITHUB_ENV
       - name: Update root package.json version
         uses: jossef/action-set-json-field@v2.1
         with:
           file: package.json
           field: version
-          value: ${{ github.event.release.tag_name }}
+          value: ${{ VERSION }}
       - name: Update laskakit-data-feeder package.json version
         uses: jossef/action-set-json-field@v2.1
         with:
           file: laskakit-data-feeder/package.json
           field: version
-          value: ${{ github.event.release.tag_name }}
+          value: ${{ VERSION }}
       - name: Update laskakit-data-feeder addon config.json version
         uses: jossef/action-set-json-field@v2.1
         with:
           file: laskakit-data-feeder/config.json
           field: version
-          value: ${{ github.event.release.tag_name }}
+          value: ${{ VERSION }}
       - name: Extract release date from git tag
         id: release_date
         run: |
@@ -39,13 +47,13 @@ jobs:
       - name: Update Changelog
         uses: stefanzweifel/changelog-updater-action@v1
         with:
-          latest-version: ${{ github.event.release.tag_name }}
+          latest-version: ${{ VERSION }}
           release-date: ${{ steps.release_date.outputs.date }}
           release-notes: ${{ github.event.release.body }}
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "chore: Release ${{ github.event.release.tag_name }} [skip ci]"
+          commit_message: "chore: Release ${{ VERSION }} [skip ci]"
 
   publish-docker:
     name: Publish to Docker Hub
