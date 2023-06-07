@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.3 - 2023-06-07
+
+### What’s Changed
+
+- No changes
+
 ## 0.2.2 - 2023-06-06
 
 ### What’s Changed
