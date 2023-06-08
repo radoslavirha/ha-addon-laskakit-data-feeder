@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.7 - 2023-06-08
+
+### What’s Changed
+
+- chore: Remove workspaces @radoslavirha (#10)
+
 ## 0.2.6 - 2023-06-07
 
 ### What’s Changed
