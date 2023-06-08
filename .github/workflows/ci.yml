@@ -19,8 +19,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - run: yarn
-      - run: yarn workspaces run lint
+      - run: cd laskakit-data-feeder
+      - run: yarn install
+      - run: yarn lint
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -33,5 +34,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - run: yarn
-      - run: yarn workspaces run build
+      - run: cd laskakit-data-feeder
+      - run: yarn install
+      - run: yarn build

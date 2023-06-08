@@ -14,8 +14,9 @@ You can configure `laskakit-data-feeder/.env` to simulate options from Homeassis
 ```sh
 git git@github.com:radoslavirha/ha-addon-laskakit-data-feeder.git
 cd ha-addon-laskakit-data-feeder
-yarn install
+yarn install # install husky and commitlint
 cd laskakit-data-feeder
+yarn install
 yarn start
 ```
 
@@ -23,19 +24,9 @@ You should now have a running server on [localhost:8000](http://localhost:8000).
 
 When you're ready to stop your local server, type <kbd>Ctrl</kbd>+<kbd>C</kbd> in your terminal window.
 
-Note that `yarn install` is step that should typically only need to be run once each time you pull the latest for a branch.
-
-- `yarn install` does a clean install of dependencies, without updating the `yarn.lock` file
-
 ## Lint
 
 Runs eslint on code:
-
-```sh
-yarn workspaces run lint
-```
-
-OR
 
 ```sh
 cd laskakit-data-feeder
@@ -43,12 +34,6 @@ yarn lint
 ```
 
 ## Build
-
-```sh
-yarn workspaces run build
-```
-
-OR
 
 ```sh
 cd laskakit-data-feeder
