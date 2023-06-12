@@ -1,4 +1,8 @@
+[![GitHub release](https://img.shields.io/github/release/radoslavirha/ha-addon-laskakit-data-feeder?sort=semver&color=blue)](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/releases/)
 [![CI](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/actions/workflows/ci.yml/badge.svg)](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder/actions/workflows/ci.yml)
+[![stars - ha-addon-laskakit-data-feeder](https://img.shields.io/github/stars/radoslavirha/ha-addon-laskakit-data-feeder?style=social)](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder)
+[![forks - ha-addon-laskakit-data-feeder](https://img.shields.io/github/forks/radoslavirha/ha-addon-laskakit-data-feeder?style=social)](https://github.com/radoslavirha/ha-addon-laskakit-data-feeder)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 ![Home Assistant](https://img.shields.io/badge/home%20assistant-%2341BDF5.svg?style=for-the-badge&logo=home-assistant&logoColor=white)
 
@@ -14,10 +18,13 @@
 
 This add-on is insired by https://github.com/jakubcizek/pojdmeprogramovatelektroniku/tree/master/SrazkovyRadar.
 
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](laskakit-data-feeder/DOCS.md "Go to project documentation")
+[![view - CHANGELOG](https://img.shields.io/badge/view-CHANGELOG-blue?style=for-the-badge)](CHANGELOG.md "Go to CHANGELOG")
+
 [Contributing guide](.github/CONTRIBUTING.md)
 
 [Development guide](.github/development.md)
 
-[CHANGELOG](CHANGELOG.md)
+## License
 
-[Add-on docs](laskakit-data-feeder/DOCS.md)
+Released under [MIT](/LICENSE) by [@radoslavirha](https://github.com/radoslavirha).
