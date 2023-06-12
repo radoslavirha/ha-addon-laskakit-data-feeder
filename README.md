@@ -27,4 +27,4 @@ This add-on is insired by https://github.com/jakubcizek/pojdmeprogramovatelektro
 
 ## License
 
-Released under [MIT](/LICENSE) by [@radoslavirha](https://github.com/radoslavirha).
+Released under [MIT](/LICENSE.md) by [@radoslavirha](https://github.com/radoslavirha).
